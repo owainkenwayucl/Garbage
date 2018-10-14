@@ -1,7 +1,7 @@
 It's root/.workspace/.garbage.
 ==============================
 
-![Trash Can](images/icons/full_bin.png)
+![Trash Can](images/icons/newtrash-full.gif)
 
 > "Joey, a garbage file holds miscellaneous data.  Junk"
 >  -- The Phantom Phreak
