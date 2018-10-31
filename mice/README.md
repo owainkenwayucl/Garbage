@@ -5,4 +5,6 @@
 * `50-vmmouse.conf` - Saitek/Madcatz R.A.T.3.
 * `52-logitechmarble.conf` - Logitech Marble trackball - left mini button scrolls, right mini button middle-clicks, emulate3 buttons enabled. 2D scrolling.
 
-On ubuntu these go in `/usr/share/X11/xorg.conf.d`.
+On Ubuntu/Raspbian these go in `/usr/share/X11/xorg.conf.d`.
+
+* `fix_libinput.sh` - This shell script enforces settings from `52-logitechmarble.conf` which are mysteriously overridden on some distros with `libinput` e.g. Raspbian.  This needs to be run at every login by whichever method you prefer.
