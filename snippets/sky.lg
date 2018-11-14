@@ -1,0 +1,13 @@
+to sky :number :angle :distance
+  clean
+  pu
+  hideturtle
+  repeat :number [rt :angle fd :distance star 10]
+end
+
+to star :size
+  pd
+  repeat 5 [fd :size rt 144]
+  pu
+end
+
