@@ -1,0 +1,13 @@
+--- freetype.h.orig	2018-11-27 22:08:03.194522693 +0000
++++ freetype.h	2018-11-27 22:08:14.370390558 +0000
+@@ -798,7 +798,9 @@
+ #define ft_encoding_latin_1         FT_ENCODING_ADOBE_LATIN_1
+ #define ft_encoding_latin_2         FT_ENCODING_OLD_LATIN_2
+ #define ft_encoding_sjis            FT_ENCODING_SJIS
+-#define ft_encoding_gb2312          FT_ENCODING_PRC
++// #define ft_encoding_gb2312          FT_ENCODING_PRC
++// FIXED BY OWAIN KENWAY
++#define ft_encoding_gb2312          FT_ENCODING_GB2312
+ #define ft_encoding_big5            FT_ENCODING_BIG5
+ #define ft_encoding_wansung         FT_ENCODING_WANSUNG
+ #define ft_encoding_johab           FT_ENCODING_JOHAB
