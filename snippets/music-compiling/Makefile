@@ -1,5 +1,5 @@
 # Generic makefile for using Lilypond to build PDFs/PNGs (and accidentally also
-# MIDI files from ABC format files.
+# MIDI files) from ABC format files.
 
 # Owain Kenway
 
