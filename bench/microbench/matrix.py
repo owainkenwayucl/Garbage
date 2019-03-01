@@ -20,7 +20,7 @@ def matrix_stats(t):
         d = rand(n,n) 
 
         p = concatenate((a,b,c,d), axis=1)
-        q = concatenate((concatenate((a,b),axis=1), cocatenate((c,d), axis=1)), axis=0)
+        q = concatenate((concatenate((a,b),axis=1), concatenate((c,d), axis=1)), axis=0)
 
         v[i] = trace(matrix_power(dot(p,t,p),4))
         w[i] = trace(matrix_power(dot(q,t,q),4))
@@ -34,7 +34,7 @@ def bench():
 	c=matrix_multiply(1000)
 	stop1 = time.time()
 
-    start2 = time.time()
+	start2 = time.time()
 	(d,e)=matrix_stats(1000)
 	stop2 = time.time()
 	return [(stop1 - start1), (stop2 - start2)]
