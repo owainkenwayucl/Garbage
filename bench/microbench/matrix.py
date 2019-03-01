@@ -30,12 +30,15 @@ def matrix_stats(t):
 
 def bench():
 	import time
+    trials=1000
 	start1 = time.time()
-	c=matrix_multiply(1000)
+    for a in range(trials):
+	    c=matrix_multiply(1000)
 	stop1 = time.time()
 
 	start2 = time.time()
-	(d,e)=matrix_stats(1000)
+    for b in range(trials):
+	    (d,e)=matrix_stats(1000)
 	stop2 = time.time()
 	return [(stop1 - start1), (stop2 - start2)]
 
