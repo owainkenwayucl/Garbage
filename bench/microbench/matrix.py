@@ -22,8 +22,8 @@ def matrix_stats(t):
         p = concatenate((a,b,c,d), axis=1)
         q = concatenate((concatenate((a,b),axis=1), concatenate((c,d), axis=1)), axis=0)
 
-        v[i] = trace(matrix_power(dot(p.t,p),4))
-        w[i] = trace(matrix_power(dot(q.t,q),4))
+        v[i] = trace(matrix_power(dot(p.T,p),4))
+        w[i] = trace(matrix_power(dot(q.T,q),4))
 
     return (std(v)/mean(v), std(w)/mean(w))
 
