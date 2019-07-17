@@ -14,7 +14,7 @@ def life(image, console=True, printpop=True):
 	while (True):
 		imlist = [] # Structure for uPython Micro:Bit images
 		pop = 0 # Keep track of population
-		newimage=[x[:] for x in [[0] * yres] *xres]
+		newimage = blank()
 		if (console):
 			print("+-----+")
 		# Output last step and update current.
@@ -69,7 +69,7 @@ def life(image, console=True, printpop=True):
 
 # Create a glider input.
 def glider():
-	image = [x[:] for x in [[0] * yres] *xres]
+	image = blank()
 
 	# set up glider
 	image[3][1] = 1
@@ -79,6 +79,9 @@ def glider():
 	image[3][3] = 1
 
 	return(image)
+
+def blank():
+	return [x[:] for x in [[0] * yres] *xres]
 
 life(glider())
 #life(glider(), console=False, printpop=False)
