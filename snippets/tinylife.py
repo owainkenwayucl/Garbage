@@ -7,21 +7,31 @@
 xres = 5
 yres = 5
 
-def life(image):
+# from microbit import *
+
+def life(image, console=True, printpop=True):
 	# Our main loop.
 	while (True):
+		imlist = [] # Structure for uPython Micro:Bit images
 		pop = 0 # Keep track of population
 		newimage=[x[:] for x in [[0] * yres] *xres]
-		print("+-----+")
+		if (console):
+			print("+-----+")
 		# Output last step and update current.
 		for j in range(yres):
-			print("|", end="")
+			line = ""
+			if (console):
+				print("|", end="")
 			for i in range(xres):
 				if image[i][j] == 1:
-					print("#",end="")
+					if (console):
+						print("#",end="")
 					pop += 1
+					line = line + "8"
 				else:
-					print(" ",end="")
+					if (console):
+						print(" ",end="")
+					line = line + "0"
 
 				orig = image[i][j]
 				left = (i-1)%xres
@@ -37,10 +47,20 @@ def life(image):
 					newimage[i][j] = orig
 				else:
 					newimage[i][j] = 0
-			print("|")
-		print("+-----+")
-		print("Population: " + str(pop))
-		print("")
+			if (console):
+				print("|")
+			imlist.append(line)
+		
+		if (console):
+			print("+-----+")
+		if (printpop):
+			print("Population: " + str(pop))
+		if (console):
+			print("")
+
+		#outimg = Image(imlist) # Create Micro:Bit image
+		#display.show(outimg)   # Push it to LEDs.
+
 		# Copy new image into old.
 		for j in range(yres):
 			for i in range(xres):
@@ -61,3 +81,4 @@ def glider():
 	return(image)
 
 life(glider())
+#life(glider(), console=False, printpop=False)
