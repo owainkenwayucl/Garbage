@@ -15,7 +15,7 @@ def life(image, console=True, printpop=True):
 	while (True):
 		if button_a.get_presses() > p:
 			break
-		print(button_a.get_presses())
+		
 		imlist = [] # Structure for uPython Micro:Bit images
 		pop = 0 # Keep track of population
 		newimage = blank()
@@ -89,5 +89,5 @@ def blank():
 
 # In your REPL "from tinylife import *"
 # Then
-#life(glider())
+# life(glider())
 # life(glider(), console=False, printpop=False)
