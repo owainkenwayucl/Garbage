@@ -47,7 +47,7 @@ def life(image):
 				image[i][j] = newimage[i][j]
 
 
-# Create a glider input and run it.
+# Create a glider input.
 def glider():
 	image = [x[:] for x in [[0] * yres] *xres]
 
@@ -58,6 +58,6 @@ def glider():
 	image[2][3] = 1
 	image[3][3] = 1
 
-	life(image)
+	return(image)
 
-glider()
+life(glider())
