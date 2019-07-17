@@ -83,5 +83,7 @@ def glider():
 def blank():
 	return [x[:] for x in [[0] * yres] *xres]
 
-life(glider())
-#life(glider(), console=False, printpop=False)
+# In your REPL "from tinylife import *"
+# Then
+# life(glider())
+# life(glider(), console=False, printpop=False)
