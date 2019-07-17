@@ -7,11 +7,15 @@
 xres = 5
 yres = 5
 
-# from microbit import *
+from microbit import *
 
 def life(image, console=True, printpop=True):
+	p = button_a.get_presses()
 	# Our main loop.
 	while (True):
+		if button_a.get_presses() > p:
+			break
+		print(button_a.get_presses())
 		imlist = [] # Structure for uPython Micro:Bit images
 		pop = 0 # Keep track of population
 		newimage = blank()
@@ -58,8 +62,8 @@ def life(image, console=True, printpop=True):
 		if (console):
 			print("")
 
-		#outimg = Image(imlist) # Create Micro:Bit image
-		#display.show(outimg)   # Push it to LEDs.
+		outimg = Image(imlist) # Create Micro:Bit image
+		display.show(outimg)   # Push it to LEDs.
 
 		# Copy new image into old.
 		for j in range(yres):
@@ -85,5 +89,5 @@ def blank():
 
 # In your REPL "from tinylife import *"
 # Then
-# life(glider())
+#life(glider())
 # life(glider(), console=False, printpop=False)
