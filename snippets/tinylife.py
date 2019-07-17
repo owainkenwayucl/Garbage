@@ -3,18 +3,12 @@
 
 # Owain Kenway
 
-def life():
-	xres=5
-	yres=5
-	image = [x[:] for x in [[0] * yres] *xres]
+# Images are always 5x5 as we want to show them on the LEDs.
+xres = 5
+yres = 5
 
-	# set up glider
-	image[3][1] = 1
-	image[1][2] = 1
-	image[3][2] = 1
-	image[2][3] = 1
-	image[3][3] = 1
-
+def life(image):
+	# Our main loop.
 	while (True):
 		pop = 0 # Keep track of population
 		newimage=[x[:] for x in [[0] * yres] *xres]
@@ -35,6 +29,7 @@ def life():
 				above = (j-1)%yres
 				below = (j+1)%yres
 
+				# 9 way sum.
 				s = (image[left][above] + image[i][above] + image[right][above] + image[left][j] + image[i][j] + image[right][j] + image[left][below] + image[i][below] + image[right][below])
 				if (s == 3):
 					newimage[i][j] = 1
@@ -45,10 +40,24 @@ def life():
 			print("|")
 		print("+-----+")
 		print("Population: " + str(pop))
-
+		print("")
 		# Copy new image into old.
 		for j in range(yres):
 			for i in range(xres):
 				image[i][j] = newimage[i][j]
 
-life()
+
+# Create a glider input and run it.
+def glider():
+	image = [x[:] for x in [[0] * yres] *xres]
+
+	# set up glider
+	image[3][1] = 1
+	image[1][2] = 1
+	image[3][2] = 1
+	image[2][3] = 1
+	image[3][3] = 1
+
+	life(image)
+
+glider()
