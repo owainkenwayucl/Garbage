@@ -58,8 +58,8 @@ def life(image, console=False, printpop=False):
 			print("+-----+")
 		if (printpop):
 			print("Population: " + str(pop))
-		if pop <= 0:
-			break
+		#if pop <= 0:
+		#	break
 		if (console):
 			print("")
 
