@@ -9,21 +9,20 @@ yres = 5
 
 from microbit import *
 
-def life(image, console=True, printpop=True):
+def life(image, console=False, printpop=False):
 	p = button_a.get_presses()
 	# Our main loop.
 	while (True):
 		if button_a.get_presses() > p:
 			break
 		
-		imlist = [] # Structure for uPython Micro:Bit images
+		imstr = "" # Structure for uPython Micro:Bit images
 		pop = 0 # Keep track of population
 		newimage = blank()
 		if (console):
 			print("+-----+")
 		# Output last step and update current.
 		for j in range(yres):
-			line = ""
 			if (console):
 				print("|", end="")
 			for i in range(xres):
@@ -31,11 +30,11 @@ def life(image, console=True, printpop=True):
 					if (console):
 						print("#",end="")
 					pop += 1
-					line = line + "8"
+					imstr = imstr + "8"
 				else:
 					if (console):
 						print(" ",end="")
-					line = line + "0"
+					imstr = imstr + "0"
 
 				orig = image[i][j]
 				left = (i-1)%xres
@@ -53,8 +52,8 @@ def life(image, console=True, printpop=True):
 					newimage[i][j] = 0
 			if (console):
 				print("|")
-			imlist.append(line)
-		
+			imstr = imstr + ":"
+		imstr = imstr[:-1]
 		if (console):
 			print("+-----+")
 		if (printpop):
@@ -62,7 +61,7 @@ def life(image, console=True, printpop=True):
 		if (console):
 			print("")
 
-		outimg = Image(imlist) # Create Micro:Bit image
+		outimg = Image(imstr)  # Create Micro:Bit image
 		display.show(outimg)   # Push it to LEDs.
 
 		# Copy new image into old.

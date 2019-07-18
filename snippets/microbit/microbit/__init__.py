@@ -40,7 +40,10 @@ class Image:
 			if len(image_data) == 1:
 				NOTIMPLEMENTED()
 			else:
-				NOTIMPLEMENTED()
+				l = image_data.split(":")
+				for j in range(5):
+					for i in range(5):
+						self.data[i][j] = int(l[j][i])
 		else:
 			for j in range(5):
 				for i in range(5):
