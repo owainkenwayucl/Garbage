@@ -58,6 +58,8 @@ def life(image, console=False, printpop=False):
 			print("+-----+")
 		if (printpop):
 			print("Population: " + str(pop))
+		if pop <= 0:
+			break
 		if (console):
 			print("")
 
@@ -83,10 +85,17 @@ def glider():
 
 	return(image)
 
+def randomp(p):
+	import random
+	r = [x[:] for x in [[0] * yres] *xres]
+	for i in range(5):
+		for j in range(5):
+			n = random.random()
+			if n <= p:
+				r[i][j] = 1
+	return r
+
 def blank():
 	return [x[:] for x in [[0] * yres] *xres]
 
-# In your REPL "from tinylife import *"
-# Then
-# life(glider())
-# life(glider(), console=False, printpop=False)
+
