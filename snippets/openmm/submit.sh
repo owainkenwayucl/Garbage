@@ -15,7 +15,7 @@ module load parmed/3.2.0
 
 export OPENMM_CPU_THREADS=$OMP_NUM_THREADS
 
-echo "$OPENMM_CPU_THREWADS threads."
+echo "$OPENMM_CPU_THREADS threads."
 
 date
 
