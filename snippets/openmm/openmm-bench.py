@@ -9,7 +9,7 @@ import time
 
 def ts(msg):
    t = time.localtime(time.time())
-   print("Date: " + str(t.tm_year) + "/" + str(t.tm_mon) +"/"+ str(t.tm_mday) + " " + str(t.tm_hour) + ":" + str(t.tm_min) + ":" + str(t.tm_sec) + " >>> " + msg)
+   print("" + str(t.tm_year) + "/" + str(t.tm_mon) +"/"+ str(t.tm_mday) + " " + str(t.tm_hour) + ":" + str(t.tm_min) + ":" + str(t.tm_sec) + " >>> " + msg)
 
 ts("Starting up...")
 
