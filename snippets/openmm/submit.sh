@@ -19,6 +19,6 @@ echo "$OPENMM_CPU_THREWADS threads."
 
 date
 
-python3 openmm-bench-david.py
+python3 openmm-bench.py
 
 date
