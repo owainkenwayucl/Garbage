@@ -1,5 +1,5 @@
 FPC=fpc
-FPARGS=
+FPARGS=-Mobjfpc
 
 test.exe: test.pas Makefile
 	$(FPC) $(FPARGS) -otest.exe test.pas
