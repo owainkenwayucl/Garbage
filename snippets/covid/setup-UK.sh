@@ -9,7 +9,7 @@ THREADS=${THREADS:-1}
 SEEDS=${SEEDS:-98798150 729101 17389101 4797132}
 OUTPUT=${OUTPUT:-output}
 R=${R:-3}
-RS=${RS:-1.5}
+RS=`echo "8 k ${R} 2.0 / p" | dc`
 
 rm -rf ${OUTPUT}
 mkdir ${OUTPUT}
