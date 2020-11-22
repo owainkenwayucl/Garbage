@@ -1,0 +1,1 @@
+alias cl-repl='rlwrap sbcl --noinform --eval "(setf *read-default-float-format* \'double-float)"'
