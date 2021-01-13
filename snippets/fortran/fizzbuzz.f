@@ -1,6 +1,6 @@
 	program fizzbuzz
 	implicit none
-	integer i,j,l
+	integer i,j
 	do i=1,20
 	j=0
 	if (mod(i,3) .eq. 0) j = j + 1
