@@ -10,7 +10,6 @@ def integralpi(n, m):
 	totalsum = 0
 	step = 1.0/numsamples
 
-#	p = step * sum(4.0/(1.0 + ((i + 0.5) * (i + 0.5) * step * step)) for i in range(numsamples))
 	for i in numba.prange(numsamples):
 		x = (i + 0.5) * step
 		totalsum += 4.0/(1.0 + (x * x))
@@ -81,8 +80,6 @@ if __name__ == '__main__':
 	begin = 1000
 	stop = 10000
 	step = 100
-
-	# precompile step
 
 	if len(sys.argv) > 1:
 		begin = int(sys.argv[1])
