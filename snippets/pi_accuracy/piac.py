@@ -62,7 +62,7 @@ def bench(lower, step, upper):
 		it, ip, ie = timefunc(integralpi, dim, dim)
 		mt, mp, me = timefunc(montecarlopi, dim, dim)
 		gt, gp, ge = timefunc(gridpi, dim, dim)
-		print(str(real) + ", " + str(it) + ", " + str(ie) + ", " + str(mt) + ", " + str(me) + ", " + str(gt) + " " + str(ge) + ", " )
+		print(str(real) + ", " + str(it) + ", " + str(ie) + ", " + str(mt) + ", " + str(me) + ", " + str(gt) + ", " + str(ge) + ", " )
 
 		current += step
 
