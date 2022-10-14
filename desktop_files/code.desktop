@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Name=Visual Studio Code
+GenericName=Text Editor
+Icon=/home/uccaoke/Applications/VSCode-linux-x64/resources/app/resources/linux/code.png
+Exec=/home/uccaoke/Applications/VSCode-linux-x64/code %F
+StartupNotify=false
+StartupWMClass=Code
+MimeType=text/plain;
