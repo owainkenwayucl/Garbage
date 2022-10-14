@@ -7,5 +7,7 @@ void dothing(char *arg) {
 
 int main(void)
 {
-  dothing("hello");
+  char *thing;
+  thing="hi";
+  dothing(thing);
 }
