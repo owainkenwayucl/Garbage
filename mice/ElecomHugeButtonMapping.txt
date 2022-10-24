@@ -1,0 +1,12 @@
+1 Left
+2 Middle (press down wheel)
+3 Right
+4 Scroll up
+5 Scroll down
+6 Scroll left
+7 Scroll right
+8 Back
+9 Forward
+10 Fn1
+11 Fn2
+12 Fn3
