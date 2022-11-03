@@ -1,5 +1,7 @@
 COLOURS=' ░▒▓█'
 ASCII_COLOURS=' .\'`^",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$'
+EMOJI_COLOURS='️⬛🟫🟧🟥🟪🟦🟩🟨️⬜'
+
 
 def show(data, colours=COLOURS):
 	height = len(data)
