@@ -5,7 +5,7 @@ def show(data, colours=COLOURS):
 	height = len(data)
 	num_colours=len(colours)
 	for a in range(height):
-		width = len(a)
+		width = len(data[a])
 		for b in range(width):
 			v = data[a][b]
 				
