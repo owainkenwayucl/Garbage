@@ -1,5 +1,5 @@
 COLOURS=' ░▒▓█'
-ASCII_COLOURS='.\'`^",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$'
+ASCII_COLOURS=' .\'`^",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$'
 
 def show(data, colours=COLOURS):
 	height = len(data)
@@ -10,8 +10,6 @@ def show(data, colours=COLOURS):
 			v = data[a][b]
 				
 			quantised = int(v * (num_colours-1))
-#			if quantised >= len(colours):
-#`				quantised = len(colours) - 1
 
 			print(colours[quantised], end='')
 		print("")
