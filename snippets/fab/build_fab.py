@@ -7,6 +7,7 @@ from fab.steps.find_source_files import FindSourceFiles,Include,Exclude
 from fab.steps.grab import GrabFolder
 from fab.steps.link import LinkExe
 from fab.steps.preprocess import fortran_preprocessor
+from pathlib import Path
 import os
 import sys
 
@@ -50,11 +51,12 @@ for a in my_compiler["opt_flags"]:
 	my_linker_flags.append(a)
 
 my_fpp = os.path.join(directory,"shims","fpp_shim.sh")
+my_workspace = Path(directory) / fab
 
 # Build a Fab config.
 config = BuildConfig(
 	project_label="FortTest",
-	#fab_workspace=os.path.join(directory, "fab"), # bugged
+	fab_workspace=os.path.join(my_workspace), # bugged
 	steps=[
 		GrabFolder(src="src/"),  # We want a subset of the source files in cwd.
 		FindSourceFiles(),
