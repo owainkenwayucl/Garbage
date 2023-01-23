@@ -51,7 +51,7 @@ for a in my_compiler["opt_flags"]:
 	my_linker_flags.append(a)
 
 my_fpp = os.path.join(directory,"shims","fpp_shim.sh")
-my_workspace = Path(directory) / fab
+my_workspace = Path(directory) / "fab"
 
 # Build a Fab config.
 config = BuildConfig(
