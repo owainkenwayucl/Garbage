@@ -56,7 +56,7 @@ my_workspace = Path(directory) / "fab"
 # Build a Fab config.
 config = BuildConfig(
 	project_label="FortTest",
-	fab_workspace=os.path.join(my_workspace), # bugged
+	fab_workspace=my_workspace, 
 	steps=[
 		GrabFolder(src="src/"),  # We want a subset of the source files in cwd.
 		FindSourceFiles(),
