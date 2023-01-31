@@ -35,6 +35,11 @@ COLOURS=' ░▒▓█'
 ASCII_COLOURS=' .\'`^",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$'
 EMOJI_COLOURS=['️⬛','🟫','🟧','🟥','🟪','🟦','🟩','🟨️','⬜']
 
+# 256 colour ANSI
+_ansi_colour_numbers = [x + 231 + 1 for x in range(24)]
+_ansi_colour_numbers.append(231)
+ANSI_COLOURS=['\033[48;5;'+str(x)+'m  \033[m' for x in _ansi_colour_numbers]
+
 def show(data, colours=COLOURS):
 	height = len(data)
 	num_colours=len(colours)
