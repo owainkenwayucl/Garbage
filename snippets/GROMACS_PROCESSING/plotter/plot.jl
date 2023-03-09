@@ -8,4 +8,4 @@ plt = lineplot(g20182msd[begin:end,1], g20182msd[begin:end,2], title="GROMACS 20
 lineplot!(plt, g20215msd[begin:end,1], g20215msd[begin:end,2], color=:cyan, name="GROMACS 2021.5")
 
 print(plt)
-
+print("")
