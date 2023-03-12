@@ -29,7 +29,7 @@ echo "Selected OpenMPI module: ${_OMP_MODULE}"
 module load ${_OMP_MODULE}
 module load ${_GRO_MODULE}
 
-_DIR_NAME="GROMACS-${_GRO_VERSION}-${JOB_ID}"
+_DIR_NAME="GROMACS-${_GRO_MAJOR_VERSION}-${JOB_ID}"
 
 mkdir -p ${_DIR_NAME}
 cd ${_DIR_NAME}
