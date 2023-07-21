@@ -17,7 +17,6 @@ source /opt/graphcore/poplar_sdk-3.2.0/popart-rhel_8-3.2.0+2580-b82480c629/enabl
 export TF_POPLAR_BASE=/opt/graphcore/poplar_sdk-3.2.0/poplar-rhel_8-3.2.0+2580-b82480c629
 ```
 
-With the new python install in path:
 
 ```
 virtualenv jax_build
