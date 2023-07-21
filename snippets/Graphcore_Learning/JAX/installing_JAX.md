@@ -1,11 +1,10 @@
 # Installing JAX on Mandelbrot/Fibonacci
 
-There is an experimental port of JAX to IPU here (https://github.com/graphcore-research/jax-experimental). Unfortunately, it is experiment and this means it needs python 3.8 (we have 3.9) and Ubuntu (we are on RHEL).  This means the wheel for JAX works (as it's just python) but the wheel for JAXlib doesn't.
+There is an experimental port of JAX to IPU here (https://github.com/graphcore-research/jax-experimental). Unfortunately, it is experimental and this means it needs python 3.8 (we have 3.9) and Ubuntu (we are on RHEL).  This means the wheel for JAX works (as it's just python) but the wheel for JAXlib doesn't.
 
 ## Prerequisits:
 
 1. Install Bazel 5.2.0 in the usual painful way and add to path.
-2. Intall Python 3.8 locally. Since we have build scripts in the rcps-build-scripts repository for 3.8.6 I used that. For my next trick I'll try 3.9.
 
 ```
 git clone https://github.com/graphcore-research/jax-experimental
@@ -41,9 +40,9 @@ build/build.py --enable_ipu --bazel_options=--override_repository=org_tensorflow
 
 (replace /PATH/TO/ with the absolute path)
 
-You should end up with a wheel in `dist/jaxlib-0.3.15+ipu.sdk320-cp38-none-manylinux2014_x86_64.whl`
+You should end up with a wheel in `dist/jaxlib-0.3.15+ipu.sdk320-cp39-none-manylinux2014_x86_64.whl`
 
-Pip Install that and the JAX one from the website.
+Pip Install that and the JAX one from the website (https://github.com/graphcore-research/jax-experimental/releases/download/jax-v0.3.16-ipu-beta2-sdk3/jax-0.3.16%2Bipu-py3-none-any.whl).
 
 ```python
 from functools import partial
