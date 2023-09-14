@@ -1,0 +1,9 @@
+  "env": {"LD_LIBRARY_PATH":"/opt/graphcore/poplar_sdk-3.3.0/popart-rhel_8-3.3.0+2787-b67b751185/lib64:/opt/graphcore/poplar_sdk-3.3.0/poplar-rhel_8-3.3.0+2787-b67b751185/lib64:/opt/rh/gcc-toolset-9/root/usr/lib64:/opt/rh/gcc-toolset-9/root/usr/lib:/opt/rh/gcc-toolset-9/root/usr/lib64/dyninst:/opt/rh/gcc-toolset-9/root/usr/lib/dyninst:/opt/rh/gcc-toolset-9/root/usr/lib64:/opt/rh/gcc-toolset-9/root/usr/lib",
+          "POPLAR_SDK_ENABLED":"/opt/graphcore/poplar_sdk-3.3.0/poplar-rhel_8-3.3.0+2787-b67b751185",
+          "CMAKE_PREFIX_PATH":"/opt/graphcore/poplar_sdk-3.3.0/popart-rhel_8-3.3.0+2787-b67b751185:/opt/graphcore/poplar_sdk-3.3.0/poplar-rhel_8-3.3.0+2787-b67b751185",
+          "OPAL_PREFIX":"/opt/graphcore/poplar_sdk-3.3.0/poplar-rhel_8-3.3.0+2787-b67b751185",
+          "CPATH":"/opt/graphcore/poplar_sdk-3.3.0/popart-rhel_8-3.3.0+2787-b67b751185/include:/opt/graphcore/poplar_sdk-3.3.0/poplar-rhel_8-3.3.0+2787-b67b751185/include",
+          "LIBRARY_PATH":"/opt/graphcore/poplar_sdk-3.3.0/popart-rhel_8-3.3.0+2787-b67b751185/lib64:/opt/graphcore/poplar_sdk-3.3.0/poplar-rhel_8-3.3.0+2787-b67b751185/lib64",
+          "PYTHONPATH":"/opt/graphcore/poplar_sdk-3.3.0/popart-rhel_8-3.3.0+2787-b67b751185/python:/opt/graphcore/poplar_sdk-3.3.0/poplar-rhel_8-3.3.0+2787-b67b751185/python:/opt/graphcore/poplar_sdk-3.3.0/poplar-rhel_8-3.3.0+2787-b67b751185/lib64/python",
+          "PATH":"/opt/graphcore/poplar_sdk-3.3.0/poplar-rhel_8-3.3.0+2787-b67b751185/bin:/opt/rh/gcc-toolset-9/root/usr/bin:/home/uccaoke/.local/bin:/home/uccaoke/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin"},
+
