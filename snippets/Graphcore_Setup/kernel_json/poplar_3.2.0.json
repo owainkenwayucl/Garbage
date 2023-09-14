@@ -1,6 +1,6 @@
   "env": {"LD_LIBRARY_PATH":"/opt/graphcore/poplar_sdk-3.2.0/popart-rhel_8-3.2.0+2580-b82480c629/lib64:/opt/graphcore/poplar_sdk-3.2.0/poplar-rhel_8-3.2.0+2580-b82480c629/lib64:/opt/rh/gcc-toolset-9/root/usr/lib64:/opt/rh/gcc-toolset-9/root/usr/lib:/opt/rh/gcc-toolset-9/root/usr/lib64/dyninst:/opt/rh/gcc-toolset-9/root/usr/lib/dyninst:/opt/rh/gcc-toolset-9/root/usr/lib64:/opt/rh/gcc-toolset-9/root/usr/lib",
           "POPLAR_SDK_ENABLED":"/opt/graphcore/poplar_sdk-3.2.0/poplar-rhel_8-3.2.0+2580-b82480c629",
-          "CMAKE_PREFIX_PAT":"/opt/graphcore/poplar_sdk-3.2.0/popart-rhel_8-3.2.0+2580-b82480c629:/opt/graphcore/poplar_sdk-3.2.0/poplar-rhel_8-3.2.0+2580-b82480c629",
+          "CMAKE_PREFIX_PATH":"/opt/graphcore/poplar_sdk-3.2.0/popart-rhel_8-3.2.0+2580-b82480c629:/opt/graphcore/poplar_sdk-3.2.0/poplar-rhel_8-3.2.0+2580-b82480c629",
           "OPAL_PREFIX":"/opt/graphcore/poplar_sdk-3.2.0/poplar-rhel_8-3.2.0+2580-b82480c629",
           "CPATH":"/opt/graphcore/poplar_sdk-3.2.0/popart-rhel_8-3.2.0+2580-b82480c629/include:/opt/graphcore/poplar_sdk-3.2.0/poplar-rhel_8-3.2.0+2580-b82480c629/include",
           "LIBRARY_PATH":"/opt/graphcore/poplar_sdk-3.2.0/popart-rhel_8-3.2.0+2580-b82480c629/lib64:/opt/graphcore/poplar_sdk-3.2.0/poplar-rhel_8-3.2.0+2580-b82480c629/lib64",
