@@ -4,6 +4,7 @@ qemu-system-ppc \
 	-L pc-bios \
 	-boot c \
 	-M mac99,via=pmu \
+	-cpu g3 \
 	-m 640 \
 	-g 1920x1080x32 \
 	-prom-env 'auto-boot?=true' \
