@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
+import os
+import json
+import sys
 
 def fix_json(path):
-	import os
-	import json
-
 	LD_LIBRARY_PATH = os.environ["LD_LIBRARY_PATH"]
 
 	kernelspec = {}
@@ -18,13 +18,17 @@ def fix_json(path):
 		json.dump(kernelspec, kernelspec_json, indent=4, sort_keys=True)
 		kernelspec_json.close()
 
+def generate_path(kernel_name):
+	userid = os.getlogin()
+
+	return f"/home/{userid}/.local/share/jupyter/kernels/{kernel_name}/kernel.json"
+ 
 def main():
-	import sys
 
 	if len(sys.argv) > 0:
-		fix_json(sys.argv[1])
+		fix_json(generate_path(sys.argv[1]))
 	else:
-		print("Call with json file as first argument.")
+		print("Call with kernel name as first argument.")
 
 if __name__ == "__main__":
 	main()
