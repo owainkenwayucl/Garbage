@@ -22,11 +22,18 @@ def generate_path(kernel_name):
 	userid = os.getlogin()
 
 	return f"/home/{userid}/.local/share/jupyter/kernels/{kernel_name}/kernel.json"
+
+def install_kernel(name):
+	from ipykernel.kernelspec import install
+	LD_LIBRARY_PATH = os.environ["LD_LIBRARY_PATH"] 
+	env = {"LD_LIBRARY_PATH" : LD_LIBRARY_PATH}
+	install(user=True, kernel_name=name, env=env)
  
 def main():
 
 	if len(sys.argv) > 0:
-		fix_json(generate_path(sys.argv[1]))
+		install_kernel(sys.argv[1])
+		#fix_json(generate_path(sys.argv[1]))
 	else:
 		print("Call with kernel name as first argument.")
 
