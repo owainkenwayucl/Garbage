@@ -1,0 +1,4 @@
+[Leeloo:uccaoke] ~/temp  ☛ osascript -e 'id of app "OpenBoard"'
+org.oe-f.OpenBoard
+[Leeloo:uccaoke] ~/temp  ☛ defaults write org.oe-f.OpenBoard NSRequiresAquaSystemAppearance -bool yes
+
