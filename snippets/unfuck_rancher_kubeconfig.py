@@ -15,10 +15,10 @@ kube_confs = list(data['Servers']['rancherDefault']['kubeConfigs'].keys())
 for a in kube_confs:
     clusters = list(data['Servers']['rancherDefault']['kubeConfigs'][a]['clusters'].keys())
     for b in clusters:
-		print(f"Updating {a}/{b}")
+        print(f"Updating {a}/{b}")
         temp = data['Servers']['rancherDefault']['kubeConfigs'][a]['clusters'][b].pop('certificate-authority-data', None)
-            if not temp == None:
-                print(f">>> CA information for {a}\{b} already deleted.")
+        if not temp == None:
+            print(f">>> CA information for {a}\{b} already deleted.")
 
 json_out = json.dumps(data, indent=4)
 
