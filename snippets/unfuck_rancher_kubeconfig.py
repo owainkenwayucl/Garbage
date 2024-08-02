@@ -22,7 +22,5 @@ for a in kube_confs:
 
 json_out = json.dumps(data, indent=4)
 
-print(json_out)
-
 with open(settings_file, "w") as f_handle:
     f_handle.write(json_out)
